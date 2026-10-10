@@ -44,3 +44,14 @@ div.gallery-item div.desc {
   background: #fff;
   border-bottom: 1px solid #e5e7eb;
 }
+
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    font-family: Arial, sans-serif;
+}
