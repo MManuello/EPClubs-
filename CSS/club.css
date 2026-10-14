@@ -29,7 +29,7 @@ padding: 0 32px; margin-top: 40px;}
 .club-card:focus-visible {
   transform: translateY(-3px);
   box-shadow: 0 8px 20px rgba(0,0,0,.08);
-  border-color: #2f6fde;
+  border-color: hotpink;
   outline: none;
 }
  
