@@ -55,4 +55,7 @@ body {
     flex-direction: column;
     font-family: Arial, sans-serif;
     background-color:#ffebee;
+    font-family: "itc-fenice", serif;
+  font-weight: 400;
+  font-style: normal;
 }
