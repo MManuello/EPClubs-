@@ -7,24 +7,24 @@
 .nav-left { display: flex; 
     list-style: none; 
     margin: 0; padding: 0; }
-.nav-left li + li { border-left: 1px solid #607d8b; }   
+.nav-left li + li { border-left: 1px solid slategray; }   
 .nav-left a, .nav-right {
   display: block; 
   padding: .4rem 1rem;
-  color: #374151; 
+  color: darkslategray; 
   text-decoration: none; 
   font-weight: 500;
 }
-.nav a:hover { color: #b0bec5; }
-.nav a { color: #111; font-weight: 700; }
+.nav a:hover { color: silver; }
+.nav a { color: black; font-weight: 700; }
 .nav a.active {
   background-color: beige;
 }
 
 .crumbs {
   display: flex; gap: .5rem; align-items: center;
-  padding: .5rem 1.5rem; font-size: .9rem; color: #6b7280;
-  border-top: 1px solid #f0f0f0; background: #fafafa;
+  padding: .5rem 1.5rem; font-size: .9rem; color: slategray;
+  border-top: 1px solid whitesmoke; background: snow;
 }
-.crumbs a { color: #6a6c73; text-decoration: none; }
+.crumbs a { color: dimgray; text-decoration: none; }
 .crumbs a:hover { text-decoration: underline; }

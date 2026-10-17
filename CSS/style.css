@@ -10,12 +10,12 @@ div.gallery {
 
 div.gallery-item {
   margin: 5px;
-  border: 1px solid #ccc;
+  border: 1px solid lightgray;
   width: calc(25% - 20px);
 }
 
 div.gallery-item:hover {
-  border: 1px solid #777;
+  border: 1px solid gray;
 }
 
 div.gallery-item img {
@@ -41,8 +41,8 @@ div.gallery-item div.desc {
 
 .site-header {
   position: sticky; top: 0; z-index: 100;
-  background: #fff;
-  border-bottom: 1px solid #e5e7eb;
+  background: white;
+  border-bottom: 1px solid lavender;
 }
 
 html, body {
@@ -53,9 +53,8 @@ html, body {
 body {
     display: flex;
     flex-direction: column;
-    font-family: Arial, sans-serif;
-    background-color:#ffebee;
-    font-family: "itc-fenice", serif;
+    background-color:lavenderblush;
+    font-family: "itc-fenice", Georgia, serif;
   font-weight: 400;
   font-style: normal;
 }
