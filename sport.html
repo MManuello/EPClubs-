@@ -9,13 +9,19 @@
     <link rel="stylesheet" href="CSS/footer.css">
     <link rel="stylesheet" href="CSS/club.css">
     <link rel="stylesheet" href="https://use.typekit.net/eov8mfq.css">
+    <style>
+      /* MM */
+      h1, h2, .club-section__title {
+        text-wrap: balance; /*NEW FEATURE*/
+      }
+    </style>
 </head>
 <body>
     <header class="site-header">
         <nav class="nav">
             <ul class="nav-left">
                 <li><a href="index.html">Home</a></li>
-                <li><a href="club.html">Clubs</a></li>
+                <li><a class="active" href="club.html">Clubs</a></li>
             </ul>
             <a class="nav-right" href="contact.html">Contact</a>
         </nav>
@@ -31,32 +37,32 @@
   <h2 class="club-section__title">Sport Clubs</h2>
   <div class="club-grid">
  
-    <a class="club-card">
+    <div class="club-card">
       <h3 class="club-card__title">Rhythmix (Dance Club)</h3>
-      <img class="club-card__img" src="img/math.jpg">
+      <img class="club-card__img" src="images/sports.png" alt="Rhythmix (Dance Club)">
       <div class="club-card__footer">
         <span>Prof. Botero</span>
         <span>Thu · LPC 202</span>
       </div>
-    </a>
+    </div>
  
-    <a class="club-card">
+    <div class="club-card">
       <h3 class="club-card__title">Bridge</h3>
-      <img class="club-card__img" src="img/robotics.jpg">
+      <img class="club-card__img" src="images/sports.png" alt="Bridge">
       <div class="club-card__footer">
         <span>Ms. Eng</span>
         <span>Thu · TMAC 205B</span>
       </div>
-    </a>
+    </div>
  
-    <a class="club-card" href="science.html">
+    <div class="club-card">
       <h3 class="club-card__title">Badminton</h3>
-      <img class="club-card__img" src="img/science.jpg">
+      <img class="club-card__img" src="images/sports.png" alt="Badminton">
       <div class="club-card__footer">
         <span>Mr. Delaney</span>
-        <span>Tue · GYM</span>
+        <span>Thu · Gym</span>
       </div>
-    </a>
+    </div>
   </div>
 </section>
     <footer class="sticky-footer">

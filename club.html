@@ -9,19 +9,24 @@
     <link rel="stylesheet" href="CSS/footer.css">
     <link rel="stylesheet" href="CSS/club.css">
     <link rel="stylesheet" href="https://use.typekit.net/eov8mfq.css">
+    <style>
+      /* MM */
+      h1, h2, .club-section__title {
+        text-wrap: balance; /*NEW FEATURE*/
+      }
+    </style>
 </head>
 <body>
   <header class="site-header">
         <nav class="nav">
             <ul class="nav-left">
                 <li><a href="index.html">Home</a></li>
-                <li><a href="club.html">Clubs</a></li>
+                <li><a class="active" href="club.html">Clubs</a></li>
             </ul>
             <a class="nav-right" href="contact.html">Contact</a>
         </nav>
         <nav class="crumbs">
             <a href="club.html">Clubs</a>
-            <span>→</span>
         </nav>
     </header>
     
@@ -32,7 +37,7 @@
     
 <div></div>
 
-<section>
+<section class="club-section">
   
     <h2 class="club-section__title">Clubs</h2>
   <div class="club-grid">
@@ -40,37 +45,37 @@
 
       <a class="club-card" href="art.html">
       <h3 class="club-card__title">Art / Misc Clubs</h3>
-      <img class="club-card__img" src="images/art.png">
+      <img class="club-card__img" src="images/art.png" alt="Art / Misc Clubs">
       <div class="club-card__footer">
-        <span style="color: white;">blah blah blah</span>
-        <span style="color: white;">hello world</span>
+        <span>5 clubs</span>
+        <span>Writing · Culture</span>
       </div>
     </a>
  
     <a class="club-card" href="eps.html">
       <h3 class="club-card__title">EPS Clubs</h3>
-      <img class="club-card__img" src="images/eps2.png">
+      <img class="club-card__img" src="images/eps2.png" alt="EPS Clubs">
       <div class="club-card__footer">
-        <span style="color: white;">Dr. Briggs</span>
-        <span style="color: white;">Thu · TALI 110</span>
+        <span>5 clubs</span>
+        <span>Business · Media</span>
       </div>
     </a>
  
     <a class="club-card" href="stem.html">
       <h3 class="club-card__title">STEM</h3>
-      <img class="club-card__img" src="images/stem.png">
+      <img class="club-card__img" src="images/stem.png" alt="STEM">
       <div class="club-card__footer">
-        <span style="color: white;">Dr. Duffy</span>
-        <span style="color: white;">Tue · TMAC 103</span>
+        <span>10 clubs</span>
+        <span>Science · TEM</span>
       </div>
     </a>
 
        <a class="club-card" href="sport.html">
       <h3 class="club-card__title">Sports</h3>
-      <img class="club-card__img" src="images/sports.png">
+      <img class="club-card__img" src="images/sports.png" alt="Sports">
       <div class="club-card__footer">
-        <span style="color: white;">Dr. Duffy</span>
-        <span style="color: white;">Tue · TMAC 103</span>
+        <span>3 clubs</span>
+        <span>Dance · Games</span>
       </div>
     </a>
 
@@ -79,7 +84,7 @@
 
 
 <footer class="sticky-footer">
-        Test name 2026
+        TO 2026
     </footer>
 </body>
 </html>

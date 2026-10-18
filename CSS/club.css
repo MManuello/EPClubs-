@@ -16,8 +16,8 @@ padding: 0 32px; margin-top: 40px;}
 .club-card {
   display: flex;
   flex-direction: column;
-  background: #fff;
-  border: 2px solid #d9dde3;
+  background: white;
+  border: 2px solid gainsboro;
   border-radius: 14px;
   aspect-ratio: 1 / 1;                     
   overflow: hidden;
@@ -37,7 +37,7 @@ padding: 0 32px; margin-top: 40px;}
   margin: 0;
   padding: 12px 16px;
   font-size: 1.1rem;
-  border-bottom: 2px solid #d9dde3;
+  border-bottom: 2px solid gainsboro;
 }
  
 .club-card__img {
@@ -46,7 +46,7 @@ padding: 0 32px; margin-top: 40px;}
   flex: 1;                                 
   min-height: 0;
   object-fit: cover;
-  background: #e9ecf1;
+  background: lavender;
 }
  
 .club-card__footer {
@@ -55,7 +55,7 @@ padding: 0 32px; margin-top: 40px;}
   gap: 8px;
   margin-top: auto;
   padding: 10px 16px;
-  border-top: 2px solid #d9dde3;
+  border-top: 2px solid gainsboro;
   font-size: .9rem;
-  color: #5d6573;
+  color: dimgray;
 }

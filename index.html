@@ -5,16 +5,80 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
     <link rel="stylesheet" href="CSS/style.css">
-    <link rel="stylesheet" href="CSS/table.css">
     <link rel="stylesheet" href="CSS/nav.css">
     <link rel="stylesheet" href="CSS/footer.css">
     <link rel="stylesheet" href="https://use.typekit.net/eov8mfq.css">
+    <style>
+      /* MM */
+      h1, h2, .club-section__title {
+        text-wrap: balance; /*NEW FEATURE*/
+      }
+
+      /* MM - club table */
+      table.clubs {
+        width: min(1100px, 94%);
+        margin: 1rem auto 3rem;
+        border-collapse: separate;
+        border-spacing: 0;
+        background: white;
+        border-radius: 14px;
+        overflow: hidden;
+        box-shadow: 0 6px 20px rgba(136, 14, 79, .10);
+        font-size: .95rem;
+        font-variant-numeric: tabular-nums; /*NEW FEATURE*/
+        flex-shrink: 0; /* body is a flex column - stop the table collapsing */
+      }
+      table.clubs thead th {
+        position: sticky; top: 56px;
+        background: purple;
+        color: white;
+        text-align: left;
+        padding: 14px 16px;
+        font-weight: 600;
+        letter-spacing: .03em;
+      }
+      table.clubs td {
+        padding: 12px 16px;
+        border-bottom: 1px solid mistyrose;
+      }
+      table.clubs tbody tr:nth-child(even) { background: snow; }
+      table.clubs tbody tr:hover { background: mistyrose; }
+      table.clubs tbody tr:last-child td { border-bottom: none; }
+      table.clubs td:first-child { font-weight: 700; color: maroon; }
+
+
+      /* phones: each row becomes a grid card */
+      @media (max-width: 700px) {
+        table.clubs thead { display: none; }
+        table.clubs, table.clubs tbody { display: block; background: none; box-shadow: none; }
+        table.clubs tr {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          gap: 6px 12px;
+          background: white !important;
+          margin-bottom: 12px;
+          padding: 12px;
+          border-radius: 12px;
+          box-shadow: 0 3px 10px rgba(136, 14, 79, .08);
+        }
+        table.clubs td { border: none; padding: 0; }
+        table.clubs td:first-child { grid-column: 1 / -1; font-size: 1.05rem; }
+        table.clubs td::before {
+          content: attr(data-label);
+          display: block;
+          font-size: .7rem;
+          text-transform: uppercase;
+          color: rosybrown;
+        }
+        table.clubs td:first-child::before { content: none; }
+      }
+    </style>
 </head>
 <body>
     <header class="site-header">
         <nav class="nav">
             <ul class="nav-left">
-                <li><a href="index.html">Home</a></li>
+                <li><a class="active" href="index.html">Home</a></li>
                 <li><a href="club.html">Clubs</a></li>
             </ul>
             <a class="nav-right" href="contact.html">Contact</a>
@@ -22,13 +86,13 @@
     </header>
     <h1 style="text-align: center;">Welcome to EPClubs!</h1>
     <h2 style="text-align: center;">Click the "clubs" link to view the club listings!</h2>
-    <p style="text-align: center;">You can explore various clubs through clicking around the site. This website was made for students at  Eastside Prepatory School in Kirkland WA to explore club options. </p>
+    <p style="text-align: center;">You can explore various clubs through clicking around the site. This website was made for students at Eastside Preparatory School in Kirkland WA to explore club options. </p>
     <h2 style="text-align: center;">EPS explainer video</h2>
     <div style="display: flex; justify-content: center;">
     <iframe width="560" height="315" src="https://www.youtube.com/embed/2hY72O4Zyfg?si=wQ8ObUHr9aa-GsFc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
     </div>
-    <h1 style="text-align: center;">Club Listings spreadsheet for quick refrence</h1>
-<table class="clubs" style="background-color: white;">
+    <h1 style="text-align: center;">Club Listings spreadsheet for quick reference</h1>
+<table class="clubs">
       <thead>
         <tr><th>Club</th><th>Sponsor</th><th>Location</th><th>Day</th><th>Time</th><th>Category</th></tr>
       </thead>
@@ -39,7 +103,7 @@
         <td data-label="Location">TALI 108</td>
         <td data-label="Day">Tuesday</td>
         <td data-label="Time">Lunch</td>
-        <td data-label="Category"><span class="tag tag-art">Art/Misc</span></td>
+        <td data-label="Category">Art/Misc</td>
       </tr>
       <tr>
         <td data-label="Club">La Mesa</td>
@@ -47,7 +111,7 @@
         <td data-label="Location">LPC 102</td>
         <td data-label="Day">Thursday</td>
         <td data-label="Time">Lunch</td>
-        <td data-label="Category"><span class="tag tag-art">Art/Misc</span></td>
+        <td data-label="Category">Art/Misc</td>
       </tr>
       <tr>
         <td data-label="Club">AQUILA Literary Magazine</td>
@@ -55,7 +119,7 @@
         <td data-label="Location">TALI 201A</td>
         <td data-label="Day">Thursday</td>
         <td data-label="Time">11:10–11:45 AM</td>
-        <td data-label="Category"><span class="tag tag-art">Art/Misc</span></td>
+        <td data-label="Category">Art/Misc</td>
       </tr>
       <tr>
         <td data-label="Club">Badminton</td>
@@ -63,7 +127,7 @@
         <td data-label="Location">Gym</td>
         <td data-label="Day">Thursday</td>
         <td data-label="Time">11:10–11:45 AM</td>
-        <td data-label="Category"><span class="tag tag-sports">Sports</span></td>
+        <td data-label="Category">Sports</td>
       </tr>
       <tr>
         <td data-label="Club">Bridge</td>
@@ -71,7 +135,7 @@
         <td data-label="Location">TMAC 205B</td>
         <td data-label="Day">Thursday</td>
         <td data-label="Time">11:10–11:45 AM</td>
-        <td data-label="Category"><span class="tag tag-sports">Sports</span></td>
+        <td data-label="Category">Sports</td>
       </tr>
       <tr>
         <td data-label="Club">Business Club</td>
@@ -79,7 +143,7 @@
         <td data-label="Location">TALI 206</td>
         <td data-label="Day">Thursday</td>
         <td data-label="Time">11:10–11:45 AM</td>
-        <td data-label="Category"><span class="tag tag-eps">EPS</span></td>
+        <td data-label="Category">EPS</td>
       </tr>
       <tr>
         <td data-label="Club">Civic Engagement</td>
@@ -87,7 +151,7 @@
         <td data-label="Location">TALI 202B</td>
         <td data-label="Day">Thursday</td>
         <td data-label="Time">11:10–11:45 AM</td>
-        <td data-label="Category"><span class="tag tag-art">Art/Misc</span></td>
+        <td data-label="Category">Art/Misc</td>
       </tr>
       <tr>
         <td data-label="Club">Environmental Club</td>
@@ -95,7 +159,7 @@
         <td data-label="Location">TMAC 201</td>
         <td data-label="Day">Thursday</td>
         <td data-label="Time">11:10–11:45 AM</td>
-        <td data-label="Category"><span class="tag tag-sci">STEM – Science</span></td>
+        <td data-label="Category">STEM – Science</td>
       </tr>
       <tr>
         <td data-label="Club">Exotic Animal Club</td>
@@ -103,7 +167,7 @@
         <td data-label="Location">TMAC 103</td>
         <td data-label="Day">Thursday</td>
         <td data-label="Time">11:10–11:45 AM</td>
-        <td data-label="Category"><span class="tag tag-sci">STEM – Science</span></td>
+        <td data-label="Category">STEM – Science</td>
       </tr>
       <tr>
         <td data-label="Club">Hack Club</td>
@@ -111,7 +175,7 @@
         <td data-label="Location">TMAC 007</td>
         <td data-label="Day">Thursday</td>
         <td data-label="Time">11:10–11:45 AM</td>
-        <td data-label="Category"><span class="tag tag-tem">STEM – TEM</span></td>
+        <td data-label="Category">STEM – TEM</td>
       </tr>
       <tr>
         <td data-label="Club">Aviation</td>
@@ -119,15 +183,15 @@
         <td data-label="Location">TALI 202A</td>
         <td data-label="Day">Thursday</td>
         <td data-label="Time">11:10–11:45 AM</td>
-        <td data-label="Category"><span class="tag tag-tem">STEM – TEM</span></td>
+        <td data-label="Category">STEM – TEM</td>
       </tr>
       <tr>
         <td data-label="Club">Investment Club</td>
         <td data-label="Sponsor">Ms. Duval-Fowler</td>
-        <td data-label="Location">TALI 201B*</td>
+        <td data-label="Location">TALI 201B</td>
         <td data-label="Day">Thursday</td>
         <td data-label="Time">11:10–11:45 AM</td>
-        <td data-label="Category"><span class="tag tag-eps">EPS</span></td>
+        <td data-label="Category">EPS</td>
       </tr>
       <tr>
         <td data-label="Club">Marine Science</td>
@@ -135,7 +199,7 @@
         <td data-label="Location">MS 101</td>
         <td data-label="Day">Thursday</td>
         <td data-label="Time">11:10–11:45 AM</td>
-        <td data-label="Category"><span class="tag tag-sci">STEM – Science</span></td>
+        <td data-label="Category">STEM – Science</td>
       </tr>
       <tr>
         <td data-label="Club">MedHOSA Club</td>
@@ -143,15 +207,15 @@
         <td data-label="Location">TMAC 102</td>
         <td data-label="Day">Thursday</td>
         <td data-label="Time">11:10–11:45 AM</td>
-        <td data-label="Category"><span class="tag tag-sci">STEM – Science</span></td>
+        <td data-label="Category">STEM – Science</td>
       </tr>
       <tr>
         <td data-label="Club">Model UN</td>
-        <td data-label="Sponsor">Dr. Lao*</td>
+        <td data-label="Sponsor">Dr. Lao</td>
         <td data-label="Location">TALI 207</td>
         <td data-label="Day">Thursday</td>
         <td data-label="Time">11:10–11:45 AM</td>
-        <td data-label="Category"><span class="tag tag-eps">EPS</span></td>
+        <td data-label="Category">EPS</td>
       </tr>
       <tr>
         <td data-label="Club">Rhythmix (Dance Club)</td>
@@ -159,7 +223,7 @@
         <td data-label="Location">LPC 202</td>
         <td data-label="Day">Thursday</td>
         <td data-label="Time">11:10–11:45 AM</td>
-        <td data-label="Category"><span class="tag tag-sports">Sports</span></td>
+        <td data-label="Category">Sports</td>
       </tr>
       <tr>
         <td data-label="Club">Yearbook</td>
@@ -167,7 +231,7 @@
         <td data-label="Location">Building 12</td>
         <td data-label="Day">Thursday</td>
         <td data-label="Time">11:10–11:45 AM</td>
-        <td data-label="Category"><span class="tag tag-eps">EPS</span></td>
+        <td data-label="Category">EPS</td>
       </tr>
       <tr>
         <td data-label="Club">EPS EV Project</td>
@@ -175,7 +239,7 @@
         <td data-label="Location">TALI 006 &amp; P1</td>
         <td data-label="Day">Thursday</td>
         <td data-label="Time">11:10–11:45 AM</td>
-        <td data-label="Category"><span class="tag tag-tem">STEM – TEM</span></td>
+        <td data-label="Category">STEM – TEM</td>
       </tr>
       <tr>
         <td data-label="Club">GIDAS (Genes in Disease &amp; Symptoms)</td>
@@ -183,7 +247,7 @@
         <td data-label="Location">TALI 304</td>
         <td data-label="Day">Thursday</td>
         <td data-label="Time">11:10–11:45 AM</td>
-        <td data-label="Category"><span class="tag tag-sci">STEM – Science</span></td>
+        <td data-label="Category">STEM – Science</td>
       </tr>
       <tr>
         <td data-label="Club">Eagle Eye</td>
@@ -191,7 +255,7 @@
         <td data-label="Location">TMAC 205A</td>
         <td data-label="Day">Thursday</td>
         <td data-label="Time">11:10–11:45 AM</td>
-        <td data-label="Category"><span class="tag tag-eps">EPS</span></td>
+        <td data-label="Category">EPS</td>
       </tr>
       <tr>
         <td data-label="Club">Psychology Club</td>
@@ -199,7 +263,7 @@
         <td data-label="Location">TALI 311</td>
         <td data-label="Day">Thursday</td>
         <td data-label="Time">11:10–11:45 AM</td>
-        <td data-label="Category"><span class="tag tag-sci">STEM – Science</span></td>
+        <td data-label="Category">STEM – Science</td>
       </tr>
       <tr>
         <td data-label="Club">SEA Club</td>
@@ -207,7 +271,7 @@
         <td data-label="Location">TALI 306B</td>
         <td data-label="Day">Thursday</td>
         <td data-label="Time">11:10–11:45 AM</td>
-        <td data-label="Category"><span class="tag tag-sci">STEM – Science</span></td>
+        <td data-label="Category">STEM – Science</td>
       </tr>
       <tr>
         <td data-label="Club">Linguistics Club</td>
@@ -215,7 +279,7 @@
         <td data-label="Location">TMAC 205C</td>
         <td data-label="Day">Thursday</td>
         <td data-label="Time">11:10–11:45 AM</td>
-        <td data-label="Category"><span class="tag tag-art">Art/Misc</span></td>
+        <td data-label="Category">Art/Misc</td>
       </tr>
       <tr>
         <td data-label="Club">Engineering Club</td>
@@ -223,7 +287,7 @@
         <td data-label="Location">TALI 305</td>
         <td data-label="Day">Thursday</td>
         <td data-label="Time">11:10–11:45 AM</td>
-        <td data-label="Category"><span class="tag tag-tem">STEM – TEM</span></td>
+        <td data-label="Category">STEM – TEM</td>
       </tr>
       </tbody>
     </table>

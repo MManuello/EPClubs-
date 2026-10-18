@@ -8,14 +8,20 @@
     <link rel="stylesheet" href="CSS/nav.css">
     <link rel="stylesheet" href="CSS/footer.css">
     <link rel="stylesheet" href="CSS/club.css">
-    <link rel="stylesheet" href="https://use.typekit.net/eov8mfq.css">"
+    <link rel="stylesheet" href="https://use.typekit.net/eov8mfq.css">
+    <style>
+      /* MM */
+      h1, h2, .club-section__title {
+        text-wrap: balance; /*NEW FEATURE*/
+      }
+    </style>
 </head>
 <body>
   <header class="site-header">
         <nav class="nav">
             <ul class="nav-left">
                 <li><a href="index.html">Home</a></li>
-                <li><a href="club.html">Clubs</a></li>
+                <li><a class="active" href="club.html">Clubs</a></li>
             </ul>
             <a class="nav-right" href="contact.html">Contact</a>
         </nav>
@@ -27,10 +33,10 @@
         </nav>
         
     </header>
-    <h1>placeholder</h1>
-    <h2>placeholder</h2>
+    <h1 style="text-align: center;">STEM Clubs</h1>
+    <h2 style="text-align: center;">Pick Science or Technology, Engineering &amp; Math</h2>
 
-    <section>
+    <section class="club-section">
   
     <h2 class="club-section__title">Clubs</h2>
   <div class="club-grid">
@@ -38,26 +44,26 @@
 
       <a class="club-card" href="science.html">
       <h3 class="club-card__title">Science</h3>
-      <img class="club-card__img" src="images/science.png">
+      <img class="club-card__img" src="images/science.png" alt="Science">
       <div class="club-card__footer">
-        <span style="color: white;">blah blah blah</span>
-        <span style="color: white;">hello world</span>
+        <span>6 clubs</span>
+        <span>Bio · Med · Enviro</span>
       </div>
     </a>
  
     <a class="club-card" href="tem.html">
       <h3 class="club-card__title">TEM</h3>
-      <img class="club-card__img" src="images/tem.jpg">
+      <img class="club-card__img" src="images/tem.jpg" alt="TEM">
       <div class="club-card__footer">
-        <span style="color: white;">Dr. Briggs</span>
-        <span style="color: white;">Thu · TALI 110</span>
+        <span>4 clubs</span>
+        <span>Code · Build · Fly</span>
       </div>
     </a>
   </div>
 </section>
 
     <footer class="sticky-footer">
-        Test Name 2026
+        TO 2026
     </footer>
 </body>
 </html>
